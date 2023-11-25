@@ -1,0 +1,4 @@
+-r base.txt
+celery==5.3.6
+djangorestframework==3.14.0
+redis==5.0.0
