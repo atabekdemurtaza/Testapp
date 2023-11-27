@@ -96,4 +96,10 @@
 
 <h3>Структура БД</h3>
 
+
+<b>Пользователи</b>
 ![Project Logo](./accounts/graph/models.png)
+
+
+<b>Книги</b>
+![Project Logo](./books/graph/models.png)
