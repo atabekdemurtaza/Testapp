@@ -1,48 +1,99 @@
-# Installation
-Clone the repository:
+# Настройка проекта "Testapp"
 
-        git clone https://github.com/atabekdemurtaza/test.git
+<h3>Установка проекта</h3>
 
-cd library
-Create a virtual environment:
+1. Клонирование репозитория:
 
-python -m venv venv
-Activate the virtual environment:
+        git clone <https://github.com/atabekdemurtaza/testapp.git>
 
-On Windows:
+2. Перейдите в директорию проекта:
 
-    venv\Scripts\activate
+        cd testapp
 
-On macOS/Linux:
+3. Создайте и активируйте виртуальное окружение:
 
-    source venv/bin/activate
+        python -m venv venv
+        source venv/bin/activate
 
-# Install dependencies:
+4. Установите зависимости:
 
-    pip install -r requirements/development.txt
+        pip install -r requirements/base.txt
 
-Run database migrations:
+<h3>Настройка .env файла</h3>
 
-    python manage.py migrate
+        # Настройки Django
+        DEBUG=True
+        SECRET_KEY=(t@r6s=y8b(tr!z8i+tx90nze9x_c$d9uqzcea8py4sq$f40rq
+        DJANGO_ALLOWED_HOSTS=localhost
 
-# Usage
+        # Настройки БД (замените на свои значения)
+        DB_NAME=testapp
+        DB_USER=admin
+        DB_PASSWORD=password
+        DB_HOST=db
+        DB_PORT=5432
 
-Run the Django development server:
+<h3>Запуск проекта с Docker</h3>
 
-    python manage.py runserver
+1.Убедитесь, что у вас установлен Docker и Docker Compose.
+2.Создайте и примените миграции Django:
 
-The API will be available at http://127.0.0.1:8000/api/books/.
+        docker-compose run web python manage.py migrate
 
-Open your browser or use tools like **curl** or **Postman** to interact with the API.
+3.Запустите проект:
 
-# API Endpoints
+        docker-compose up
 
-**GET /api/books/: Get a list of all books.**
+Приложение будет доступно по адресу http://localhost:8000/.
 
-**GET /api/books/{id}/: Get information about a specific book.**
+<h3>Работа с API</h3>
+<h4>Документация API:</h4>
 
-**POST /api/books/: Create a new book.**
+Получение списка пользователей:
 
-**PUT /api/books/{id}/: Update information about a book.**
+        GET /api/users/
 
-**DELETE /api/books/{id}/: Delete a book.**
+Получение информации о пользователе:
+
+        GET /api/users/{user_id}/
+
+Создание нового пользователя:
+
+        POST /api/register/
+
+Параметры:
+
+        {
+            "email": "user@example.com",
+            "username": "username",
+            "password": "securepassword"
+        }
+
+Обновление информации о пользователе:
+
+        PUT /api/users/{user_id}/
+
+Параметры:
+
+        {
+            "email": "new_email@example.com",
+            "username": "new_username"
+        }
+
+Удаление пользователя:
+
+        DELETE /api/users/{user_id}/
+
+
+<h3>Завершение работы</h3>
+<h4>Остановите контейнеры:</h4>
+
+    docker-compose down
+
+Деактивируйте виртуальное окружение:
+
+    deactivate
+
+<h3>Структура БД</h3>
+
+![Project Logo](./accounts/graph/models.png)

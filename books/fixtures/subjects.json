@@ -1,0 +1,52 @@
+[
+{
+  "model": "books.book",
+  "pk": 1,
+  "fields": {
+    "title": "1984",
+    "author": "George Orwell",
+    "pub_year": "1949-01-01",
+    "isbn": "978045152493"
+  }
+},
+{
+  "model": "books.book",
+  "pk": 2,
+  "fields": {
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "pub_year": "1960-01-01",
+    "isbn": "9780061120084"
+  }
+},
+{
+  "model": "books.book",
+  "pk": 3,
+  "fields": {
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "pub_year": "1925-01-01",
+    "isbn": "978074327356"
+  }
+},
+{
+  "model": "books.book",
+  "pk": 4,
+  "fields": {
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "pub_year": "1951-01-01",
+    "isbn": "9780241950432"
+  }
+},
+{
+  "model": "books.book",
+  "pk": 5,
+  "fields": {
+    "title": "Harry Potter and the Sorcerer's Stone",
+    "author": "J.K. Rowling",
+    "pub_year": "1997-01-01",
+    "isbn": "9780590353427"
+  }
+}
+]

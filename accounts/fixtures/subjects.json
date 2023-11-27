@@ -1,0 +1,41 @@
+[
+{
+  "model": "accounts.customuser",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$humWYFCKRagsyZqxifkF5A$plsEXFUmVgiVXM4cmCxcRf9HhFLuyK3w+T2hkUqBrt0=",
+    "last_login": null,
+    "email": "atabekdemurtaza@gmail.com",
+    "username": "atabekdemurtaza",
+    "date_joined": "2023-11-24T10:03:47.871Z",
+    "is_active": true,
+    "is_staff": false
+  }
+},
+{
+  "model": "accounts.customuser",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$o7hazpF35EeU28HmqxppEA$/EtUN0lIlw3pLxRLMIQ+388N0Gk1l/0GXzW9L9QiqqU=",
+    "last_login": null,
+    "email": "connectronitcompany@gmail.com",
+    "username": "Atabek",
+    "date_joined": "2023-11-24T20:44:26Z",
+    "is_active": true,
+    "is_staff": false
+  }
+},
+{
+  "model": "accounts.customuser",
+  "pk": 3,
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "email": "mychannel21war@gmail.com",
+    "username": "Murtaza",
+    "date_joined": "2023-11-25T02:11:44.241Z",
+    "is_active": true,
+    "is_staff": false
+  }
+}
+]

@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    command: python /testapp/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/testapp
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+      - redis
+
+  db:
+    image: mysql:latest
+    env_file:
+      - .env
+    ports:
+      - "3306:3306"
+
+  redis:
+    image: "redis:latest"
+    ports:
+      - "6379:6379"
+
+  celery:
+    build: .
+    command: celery -A config worker -l info
+    volumes:
+      - .:/testapp
+    depends_on:
+      - web
+      - redis
